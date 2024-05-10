@@ -96,3 +96,6 @@
 -	Employee availability is not its own entity because the only information it would have been an owning relationship to DAY_AVAL and an identifying relationship to EMPLOYEE. This does not make sense since there is no additional entity specific information so availability can be better modeled as a relationship between weak entity DAY_AVAL and EMPLOYEE with 0 to 7 instances.
 -	TIMEOFF, DAY_AVAL, and TIMESHEET are all modeled as weak entity types because they do not make sense apart from a relationship to EMPLOYEE. I could include some generic unique attribute for each of these; however, none of these entities make any sense apart from their relationship to EMPLOYEE. This is why they are weak entities.
 -	DAY_WORKED is modeled as a weak entity because it does not make sense apart from its relationship to TIMESHEET. The only way an instance DAY_WORKED makes sense is through its relationship to an instance of TIMESHEET.
+
+
+![alt text](DatabaseProjectERDiagram.jpg "ER Diagram")
