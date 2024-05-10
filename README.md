@@ -98,7 +98,7 @@
 -	DAY_WORKED is modeled as a weak entity because it does not make sense apart from its relationship to TIMESHEET. The only way an instance DAY_WORKED makes sense is through its relationship to an instance of TIMESHEET.
 
 
-![alt text](DatabaseProjectERDiagram.jpg "ER Diagram")
+![alt text](DatabaseProjectERDiagram.png "ER Diagram")
 
 
 ![alt text](DatabaseProjectRelationSchema.png "Relation Schema")
