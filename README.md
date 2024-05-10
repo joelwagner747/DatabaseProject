@@ -99,3 +99,6 @@
 
 
 ![alt text](DatabaseProjectERDiagram.jpg "ER Diagram")
+
+
+![alt text](DatabaseProjectRelationSchema.png "Relation Schema")
