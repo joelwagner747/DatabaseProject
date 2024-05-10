@@ -1,0 +1,233 @@
+Logical Definition of Domains
+Number
+Description: Integers greater than zero.
+Datatype: Integer
+Format: 1
+Address
+Description: Valid addresses which include the street name and number, city, state, and zip code.
+Datatype: String of variable length
+Format: 1717 Ford Lane Missoula, MT 59808
+First Name
+Description: First names of individuals.
+Datatype: String of variable length
+Format:
+Last Name
+Description: Last names of individuals.
+Datatype: String of variable length
+Format:
+USA Phone Number
+Description: Valid 10-digit phone numbers in the United States.
+Datatype: String of fixed length 10
+Format: (ddd)ddd-dddd
+Email Address
+Description: Valid Email Addresses.
+Datatype: String of variable length
+Format: c…c@c…c.ccc
+Date
+Description: Dates with month, day, and year.
+Datatype: Date
+Format: YYYY-MM-DD
+Time
+	Description: Time with hour, minute, and second.
+	Datatype: Time
+	Format: hh:mm:ss
+Note
+Description: Notes made by customers or employees.
+Datatype: String of variable length
+Format: Any
+Current State
+Description: The current state of some object. These are pending, rejected, and approved.
+Datatype: String of variable length
+Format: Approved, Rejected, Pending
+Boolean
+	Description: A Boolean to indicate a specific attribute.
+	Datatype: Boolean
+	Format: True or False
+Street Address
+Description: Steet number and name of a valid address
+Datatype: String of variable length
+Format: 1717 Ford Lane
+City
+Description: City Name of a valid address
+Datatype: String of variable length
+Format: Missoula
+USA State
+Description: State abbreviation of a valid address
+Datatype: String of fixed length 2
+Format: MT or cc
+Zip Code
+Description: 5 digit zip code of a valid address.
+Datatype: String of fixed length 5
+Format: 59808 or ddddd
+Name
+Description: Name of some thing
+Datatype: String of variable length
+Format: cccc..cccc
+Price
+Description: Price of some object or service in US dollars
+Datatype: Decimal with two digits after the decimal point and a total precision of 14
+Format: dd.dd
+Middle Initial
+Description: Middle Initial of a person
+Datatype: String of fixed length 1
+Format: c
+Password
+Description: The password of someone for their account
+Datatype: String of variable length
+Format: cccc…cccc
+VIN Number
+Description: VIN number of a vehicle
+Datatype: String of fixed length 17
+Format: ccccccccccccccc
+License Plate Number
+Description: License Plate number of a vehicle
+Datatype: String of variable length
+Format: cccccc
+Year
+Description: Year
+Datatype: Year
+Format: YYYY
+Make
+Description: Make of vehicle
+Datatype: String of variable length
+Format: cccccc
+Model
+Description: Model of a vehicle
+Datatype: String of variable length
+Format: cccccc
+Day Number Week
+	Description: Days from either 1 to 7
+	Datatype: Integer
+	Format: nn
+Day Number Two Weeks
+	Description: Days from either 1 to 14
+	Datatype: Integer
+	Format: nn
+Domains of Attributes
+Customer Relation:
+dom(Customer_num) = Number
+dom(Cust_billing_address) = Address
+dom(Cust_first_name) = First Name
+dom(Cust_last_name) = Last Name
+dom(Cust_phone_num) = USA Phone Number
+dom(Cust_email) = Email Address
+Quote Relation:
+dom(Quote_number) = Number
+dom(Quote_number) = Number
+dom(Quote_address) = Address
+dom(Quote_state) = Current State
+dom(Date_of_creation) = Date
+dom(Start_available) = Date
+dom(End_available) = Date
+dom(Quote_employ_note) = Note
+dom(Quote_cust_note) = Note
+dom(Customer_num) = Number
+Invoice Relation:
+dom(Invoice_number) = Number
+dom(Invoice_address) = Address
+dom(Invoice_date) = Date
+dom(Invoice_paid) = Boolean
+dom(Customer_num) = Number
+Job Relation:
+	dom(Job_number) = Number
+	dom(Job_date) = Date
+	dom(Job_Time) = Time
+	dom(Street_address) = Street Address
+	dom(City) = City
+	dom(State) = USA State
+	dom(Zip_code) = Zip Code
+	dom(Job_completed) = Boolean
+	dom(Job_employ_note) = Note
+	dom(Job_cust_note) = Note
+	dom(Customer_num) = Number
+Service Relation:
+	dom(Service_name) = Name
+Special Equipment Relation:
+	dom(Equip_num) = Number
+	dom(Equip_name) = Name
+	dom(Equip_quantity) = Number
+	dom(Equip_price) = Price
+	dom(Equip_note) = Note
+Employee Relation:
+	dom(Employee_num) = Number
+	dom(Emp_first_name) = First Name
+	dom(Emp_mid_initial) = Middle Initial
+	dom(Emp_last_name) = Last Name
+	dom(Emp_address) = Address
+	dom(Emp_email) = Email Address
+	dom(Emp_phone_num) = USA Phone Number
+	dom(Emp_password) = Password
+	dom(Emp_manager) = Boolean
+Assignment Relation:
+	dom(Assignment_num) = Number
+	dom(Date) = Date
+Vehicle Relation:
+	dom(Vin_num) = Vin Number
+	dom(License_num) = License Plate Number
+	dom(Year) = Year
+	dom(Make) = Make
+dom(Model) = Model
+dom(Vehicle_note) = Note
+Timeoff Relation:
+	dom(Employee_num) = Number
+	dom(Start_date) = Date
+	dom(End_date) = Date
+	dom(Approved) = Boolean
+Day Aval Relation:
+	dom(Employee_num) = Number
+	dom(Day_num) = Day Number Week
+TimeSheet Relation:
+	dom(Employee_num) = Number
+	dom(Start_date) = Date
+	dom(End_date) = Date
+Day Worked Relation:
+	dom(Employee_num) = Number
+	dom(Start_date) = Date
+	dom(Day_num) = Day Number Two Weeks
+Is Assigned Relation:
+	dom(Job_number) = Number
+	dom(Assignment_num) = Number
+Quoted Relation:
+	dom(Quote_number) = Number
+	dom(Service_name) = Name
+	dom(Service_price) = Price
+	dom(Service_approved) = Current State
+Preformed Relation:
+	dom(Invoice_number) = Number
+	dom(Service_name) = Name
+	dom(Service_price) = Price
+Completes Relation:
+	dom(Job_number) = Number
+	dom(Service_name) = Name
+	dom(Service_price) = Price
+Uses Relation:
+	dom(Job_number) = Number
+	dom(Equip_num) = Number
+	dom(Equip_amount) = Number
+Takes Relation:
+	dom(Assignment_num) = Number
+	dom(Vin_num) = VIN Number
+Works On Relation:
+	dom(Employee_num) = Number
+	dom(Assignment_num) = Number
+Day Aval Start Relation:
+	dom(Employee_num) = Number
+	dom(Day_num) = Day Number Week
+	dom(Aval_start) = Time
+Day Aval End Relation:
+	dom(Employee_num) = Number
+	dom(Day_num) = Day Number Week
+	dom(Aval_endt) = Time
+Day Worked Start Relation:
+	dom(Employee_num) = Number
+	dom(Start_date) = Date
+	dom(Day_num) = Day Number Two Weeks
+	dom(Worked_start) = Time
+Day Worked End Relation:
+	dom(Employee_num) = Number
+	dom(Start_date) = Date
+	dom(Day_num) = Day Number Two Weeks
+	dom(Worked_end) = Time
+
+
+

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Startup<restful-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "App.Startup",
+            "projectName": "restful-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

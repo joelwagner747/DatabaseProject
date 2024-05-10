@@ -1,0 +1,14 @@
+CREATE TABLE jw193055.JOB
+(
+    Job_id INT IDENTITY(1,1) CONSTRAINT PK_JOB PRIMARY KEY,
+    Job_date DATE NOT NULL,
+    Job_time TIME NOT NULL,
+    Street_address VARCHAR(100) NOT NULL,
+    City VARCHAR(35) NOT NULL,
+    State CHAR(2) NOT NULL,
+    Zip_code CHAR(5) NOT NULL,
+    Job_completed BIT NOT NULL CONSTRAINT DF_JOB_ISCOMPlETED DEFAULT 0,
+    Job_employee_note VARCHAR(MAX),
+    Job_customer_note VARCHAR(MAX),
+    Customer_id INT NOT NULL CONSTRAINT FK_JOB_CUSTOMER FOREIGN KEY(Customer_num) REFERENCES jw193055.CUSTOMER(Customer_id),
+);
